@@ -317,7 +317,7 @@ section {
   width: 500px;
   height: 400px;
   top: 50%;
-  left: 60%;
+  left: 65%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   letter-spacing: -0.5px;
@@ -669,18 +669,22 @@ section {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 400;
+  width: 80%;
+  aspect-ratio: 3/1;
 }
 #Slider .container2 .mainposition .mainMenu {
+  width:100%;
+  height:100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 #Slider .container2 .mainposition .mainMenu > div {
   position: relative;
   z-index: 400;
-  margin: 0 7%;
+  width:33%;
 }
 #Slider .container2 .mainposition .mainMenu > div:hover img {
   -webkit-transform: scale(1.05);
@@ -694,6 +698,9 @@ section {
   transition: 1s;
   z-index: -200;
 }
+#Slider .container2 .mainposition .mainMenu > div > a > img{
+  width:100%;
+}
 #Slider .container2 .mainposition .mainMenu .menuName {
   display: block;
   margin-top: 30px;
@@ -704,22 +711,29 @@ section {
 }
 #Slider .container2 .mainposition .mainMenu .menuhover {
   position: absolute;
-  width: 500px;
-  height: 500px;
-  left: -14%;
-  top: -11%;
+  width: 105%;
+  height: 105%;
+  left: 50%;
+  top: 50%;
   background-image: url(../images/menuhover.png);
-  -webkit-animation: rotate_image 6s linear infinite;
-          animation: rotate_image 6s linear infinite;
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  -webkit-animation: rotate_image2 6s linear infinite;
+          animation: rotate_image2 6s linear infinite;
+  /* -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%; */
   opacity: 0%;
   z-index: -200;
 }
-@keyframes rotate_image {
+@keyframes rotate_image2 {
+  0% {
+    -webkit-transform:translate(-50%, -50%) rotate(0deg);
+            transform:translate(-50%, -50%) rotate(0deg);
+  }
   100% {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg);
+    -webkit-transform:translate(-50%, -50%) rotate(360deg);
+            transform:translate(-50%, -50%) rotate(360deg);
   }
 }
 #Slider .container3 {
@@ -739,15 +753,33 @@ section {
   height: 100%;
   position: relative;
 }
-#Slider .container3 #mainBanner .threeBanner li:hover img {
+#Slider .container3 #mainBanner .threeBanner li:hover .erea3IMG {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
 }
-#Slider .container3 #mainBanner .threeBanner li img {
+#Slider .container3 #mainBanner .threeBanner li .erea3IMG {
   width: 100%;
   height: 100%;
   -webkit-filter: brightness(90%);
           filter: brightness(90%);
+}
+#Slider .container3 #mainBanner .threeBanner li .erea3IMG1{
+  background-image: url('../images/3erea1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#Slider .container3 #mainBanner .threeBanner li .erea3IMG2{
+  background-image: url('../images/3erea2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#Slider .container3 #mainBanner .threeBanner li .erea3IMG3{
+  background-image: url('../images/3erea3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 #Slider .container3 #mainBanner .threeBanner li .bT {
   position: absolute;
